@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=4 uid="uid://b83wjtjm2x7mk"]
+
+[ext_resource type="Texture2D" uid="uid://cvsva6niddxt5" path="res://assets/sprites/map/bad_tile.png" id="1_3cpq7"]
+[ext_resource type="Script" uid="uid://bvefwe6pmb08f" path="res://scripts/freshbiz.gd" id="1_cu52o"]
+[ext_resource type="Texture2D" uid="uid://865250vleq3p" path="res://assets/sprites/map/card_tile.png" id="2_txkcs"]
+[ext_resource type="Texture2D" uid="uid://i24sj58h8eeg" path="res://assets/sprites/map/good_tile.png" id="3_cu52o"]
+[ext_resource type="Texture2D" uid="uid://b3gfinhqiareo" path="res://assets/sprites/map/island_tile.png" id="4_0n31q"]
+[ext_resource type="Texture2D" uid="uid://bgx6sntwaljj1" path="res://assets/sprites/map/move_tile.png" id="5_7v3j5"]
+[ext_resource type="Texture2D" uid="uid://qt6c13guk27" path="res://assets/sprites/map/tile.png" id="6_kwjgc"]
+[ext_resource type="PackedScene" uid="uid://up52bwdhnf03" path="res://scenes/player_red.tscn" id="8_0n31q"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h7mo"]
+texture = ExtResource("1_3cpq7")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nr8wp"]
+texture = ExtResource("2_txkcs")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d2bti"]
+texture = ExtResource("3_cu52o")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ta5nu"]
+texture = ExtResource("4_0n31q")
+0:0/size_in_atlas = Vector2i(4, 2)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_flf07"]
+texture = ExtResource("5_7v3j5")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k73cj"]
+texture = ExtResource("6_kwjgc")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rjqkl"]
+sources/0 = SubResource("TileSetAtlasSource_0h7mo")
+sources/1 = SubResource("TileSetAtlasSource_nr8wp")
+sources/2 = SubResource("TileSetAtlasSource_d2bti")
+sources/3 = SubResource("TileSetAtlasSource_ta5nu")
+sources/4 = SubResource("TileSetAtlasSource_flf07")
+sources/5 = SubResource("TileSetAtlasSource_k73cj")
+
+[node name="Freshbiz" type="Node2D" node_paths=PackedStringArray("game_space")]
+script = ExtResource("1_cu52o")
+game_space = [NodePath("Positions/Red/StartRed"), NodePath("Positions/Red/SpotOneRed"), NodePath("Positions/Red/SpotTwoRed"), NodePath("Positions/Red/SpotThreeRed"), NodePath("Positions/Red/SpotFourRed"), NodePath("Positions/Red/SpotFiveRed"), NodePath("Positions/Red/SpotSixRed"), NodePath("Positions/Red/SpotSevenRed"), NodePath("Positions/Red/SpotEightRed"), NodePath("Positions/Red/SpotNineRed"), NodePath("Positions/Red/SpotTenRed"), NodePath("Positions/Red/SpotElevenRed"), NodePath("Positions/Red/SpotTwelveRed"), NodePath("Positions/Red/SpotThirteenRed"), NodePath("Positions/Red/SpotFourteenRed"), NodePath("Positions/Red/SpotFifthteenRed"), NodePath("Positions/Red/SpotSixteenRed"), NodePath("Positions/Red/FirstTransitionRed"), NodePath("Positions/Red/SpotEighteenRed"), NodePath("Positions/Red/SpotNineteenRed"), NodePath("Positions/Red/SpotTwentyRed"), NodePath("Positions/Red/SpotTwentyOneRed")]
+
+[node name="BoardLayer" type="TileMapLayer" parent="."]
+position = Vector2(-16, -16)
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAACAAIAAgAAAAAAAFAGAAIABQAAAAAAAAAKAAIAAgAAAAAAADAOAAIAAAAAAAAAADASAAIAAgAAAAAAADAWAAIABQAAAAAAAAAaAAIABAAAAAAAAAAeAAIABQAAAAAAAAAeAAYAAgAAAAAAAGAeAAoAAAAAAAAAAGAeAA4AAgAAAAAAAGAeABIABQAAAAAAAAAaABIABQAAAAAAAAAWABIAAAAAAAAAAAASABIABQAAAAAAAAAOABIAAgAAAAAAAAAKABIABQAAAAAAAAAGABIAAAAAAAAAAAACABIABQAAAAAAAAACAA4AAgAAAAAAAFACAAoAAAAAAAAAAFACAAYABQAAAAAAAAA=")
+tile_set = SubResource("TileSet_rjqkl")
+
+[node name="RollButton" type="Button" parent="."]
+offset_left = 551.0
+offset_top = 340.0
+offset_right = 626.0
+offset_bottom = 371.0
+text = "Roll Dice"
+metadata/_edit_use_anchors_ = true
+
+[node name="Players" type="Node" parent="."]
+
+[node name="PlayerRed" parent="Players" instance=ExtResource("8_0n31q")]
+position = Vector2(1000, 616)
+scale = Vector2(2, 2)
+
+[node name="Positions" type="Node" parent="."]
+
+[node name="Red" type="Node" parent="Positions"]
+
+[node name="StartRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(1000, 616)
+gizmo_extents = 19.2
+
+[node name="SpotOneRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(872, 616)
+gizmo_extents = 19.2
+
+[node name="SpotTwoRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(744, 616)
+gizmo_extents = 19.2
+
+[node name="SpotThreeRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(616, 616)
+gizmo_extents = 19.2
+
+[node name="SpotFourRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(488, 616)
+gizmo_extents = 19.2
+
+[node name="SpotFiveRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(360, 616)
+gizmo_extents = 19.2
+
+[node name="SpotSixRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(232, 616)
+gizmo_extents = 19.2
+
+[node name="SpotSevenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(104, 616)
+gizmo_extents = 19.2
+
+[node name="SpotEightRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(104, 488)
+gizmo_extents = 19.2
+
+[node name="SpotNineRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(104, 360)
+gizmo_extents = 19.2
+
+[node name="SpotTenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(104, 232)
+gizmo_extents = 19.2
+
+[node name="SpotElevenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(104, 104)
+gizmo_extents = 19.2
+
+[node name="SpotTwelveRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(232, 104)
+gizmo_extents = 19.2
+
+[node name="SpotThirteenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(360, 104)
+gizmo_extents = 19.2
+
+[node name="SpotFourteenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(488, 104)
+gizmo_extents = 19.2
+
+[node name="SpotFifthteenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(616, 104)
+gizmo_extents = 19.2
+
+[node name="SpotSixteenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(744, 104)
+gizmo_extents = 19.2
+
+[node name="FirstTransitionRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(872, 104)
+gizmo_extents = 19.2
+
+[node name="SpotEighteenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(1000, 104)
+gizmo_extents = 19.2
+
+[node name="SpotNineteenRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(1000, 232)
+gizmo_extents = 19.2
+
+[node name="SpotTwentyRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(1000, 360)
+gizmo_extents = 19.2
+
+[node name="SpotTwentyOneRed" type="Marker2D" parent="Positions/Red"]
+position = Vector2(1000, 488)
+gizmo_extents = 19.2
+
+[node name="Green" type="Node" parent="Positions"]
+
+[node name="StartGreen" type="Marker2D" parent="Positions/Green"]
+position = Vector2(1000, 536)
+gizmo_extents = 19.2
+
+[node name="Orange" type="Node" parent="Positions"]
+
+[node name="StartOrange" type="Marker2D" parent="Positions/Orange"]
+position = Vector2(920, 536)
+gizmo_extents = 19.2
+
+[node name="Blue" type="Node" parent="Positions"]
+
+[node name="StartBlue" type="Marker2D" parent="Positions/Blue"]
+position = Vector2(920, 616)
+gizmo_extents = 19.2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(521, 319)
+
+[connection signal="pressed" from="RollButton" to="." method="_on_roll_button_pressed"]
+[connection signal="pressed" from="RollButton" to="Players/PlayerRed" method="_on_roll_button_pressed"]
