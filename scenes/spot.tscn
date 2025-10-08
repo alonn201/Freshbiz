@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://calj64q183fw0"]
+
+[ext_resource type="Script" uid="uid://dbmtvdetg5i7s" path="res://scripts/spot.gd" id="1_rj7cy"]
+
+[node name="StartRed" type="Marker2D"]
+gizmo_extents = 19.2
+script = ExtResource("1_rj7cy")

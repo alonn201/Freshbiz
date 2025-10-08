@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://b83wjtjm2x7mk"]
+[gd_scene load_steps=18 format=4 uid="uid://b83wjtjm2x7mk"]
 
 [ext_resource type="Texture2D" uid="uid://cvsva6niddxt5" path="res://assets/sprites/map/bad_tile.png" id="1_3cpq7"]
 [ext_resource type="Script" uid="uid://bvefwe6pmb08f" path="res://scripts/freshbiz.gd" id="1_cu52o"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://up52bwdhnf03" path="res://scenes/player_red.tscn" id="8_0n31q"]
 [ext_resource type="Script" uid="uid://whsecyvf73md" path="res://scripts/players.gd" id="8_7v3j5"]
 [ext_resource type="PackedScene" uid="uid://cwanqu35rlgcb" path="res://scenes/dice.tscn" id="9_0n31q"]
-[ext_resource type="PackedScene" uid="uid://calj64q183fw0" path="res://scenes/spot.tscn" id="10_kwjgc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0n31q"]
 texture = ExtResource("1_3cpq7")
@@ -50,14 +49,13 @@ sources/3 = SubResource("TileSetAtlasSource_rirqy")
 sources/4 = SubResource("TileSetAtlasSource_w5pe2")
 sources/5 = SubResource("TileSetAtlasSource_1e7li")
 
-[node name="Freshbiz" type="Node2D" node_paths=PackedStringArray("game_space")]
+[node name="Freshbiz" type="Node2D"]
 script = ExtResource("1_cu52o")
-game_space = [NodePath("Positions/Red/StartRed"), NodePath("Positions/Red/Red2"), NodePath("Positions/Red/Red3"), NodePath("Positions/Red/Red4"), NodePath("Positions/Red/Red5"), NodePath("Positions/Red/Red6"), NodePath("Positions/Red/Red7"), NodePath("Positions/Red/Red8"), NodePath("Positions/Red/Red9"), NodePath("Positions/Red/Red10"), NodePath("Positions/Red/Red11"), NodePath("Positions/Red/Red12"), NodePath("Positions/Red/Red13"), NodePath("Positions/Red/Red14"), NodePath("Positions/Red/Red15"), NodePath("Positions/Red/Red16"), NodePath("Positions/Red/Red17"), NodePath("Positions/Red/RedTransition"), NodePath("Positions/Red/Red19"), NodePath("Positions/Red/Red20"), NodePath("Positions/Red/Red21"), NodePath("Positions/Red/Red22")]
 
 [node name="BoardLayer" type="TileMapLayer" parent="."]
 position = Vector2(-16, -16)
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAACAAIABQAAAAAAAAAGAAIABQAAAAAAAAAKAAIAAgAAAAAAADAOAAIAAAAAAAAAADASAAIAAgAAAAAAADAWAAIABQAAAAAAAAAaAAIABAAAAAAAAAAeAAIABQAAAAAAAAAeAAYAAgAAAAAAAGAeAAoAAAAAAAAAAGAeAA4AAgAAAAAAAGAeABIABQAAAAAAAAAaABIABQAAAAAAAAAWABIAAAAAAAAAAAASABIABQAAAAAAAAAOABIAAgAAAAAAAAAKABIABQAAAAAAAAAGABIAAAAAAAAAAAACABIABQAAAAAAAAACAA4AAgAAAAAAAFACAAoAAAAAAAAAAFACAAYABQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAIAAgAAAAAAAFAGAAIABQAAAAAAAAAKAAIAAgAAAAAAADAOAAIAAAAAAAAAADASAAIAAgAAAAAAADAWAAIABQAAAAAAAAAaAAIABAAAAAAAAAAeAAIABQAAAAAAAAAeAAYAAgAAAAAAAGAeAAoAAAAAAAAAAGAeAA4AAgAAAAAAAGAeABIABQAAAAAAAAAaABIABQAAAAAAAAAWABIAAAAAAAAAAAASABIABQAAAAAAAAAOABIAAgAAAAAAAAAKABIABQAAAAAAAAAGABIAAAAAAAAAAAACABIABQAAAAAAAAACAA4AAgAAAAAAAFACAAoAAAAAAAAAAFACAAYABQAAAAAAAAA=")
 tile_set = SubResource("TileSet_rjqkl")
 
 [node name="RollButton" type="TextureButton" parent="."]
@@ -77,89 +75,111 @@ script = ExtResource("8_7v3j5")
 
 [node name="Red" type="Node" parent="Positions"]
 
-[node name="StartRed" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="StartRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(1000, 616)
+gizmo_extents = 19.2
 
-[node name="Red2" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotOneRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(872, 616)
+gizmo_extents = 19.2
 
-[node name="Red3" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotTwoRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(744, 616)
-condition = 1
+gizmo_extents = 19.2
 
-[node name="Red4" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotThreeRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(616, 616)
+gizmo_extents = 19.2
 
-[node name="Red5" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotFourRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(488, 616)
-condition = 2
+gizmo_extents = 19.2
 
-[node name="Red6" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotFiveRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(360, 616)
+gizmo_extents = 19.2
 
-[node name="Red7" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotSixRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(232, 616)
-condition = 1
+gizmo_extents = 19.2
 
-[node name="Red8" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotSevenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(104, 616)
+gizmo_extents = 19.2
 
-[node name="Red9" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotEightRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(104, 488)
-condition = 2
+gizmo_extents = 19.2
 
-[node name="Red10" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotNineRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(104, 360)
-condition = 1
+gizmo_extents = 19.2
 
-[node name="Red11" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotTenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(104, 232)
+gizmo_extents = 19.2
 
-[node name="Red12" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotElevenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(104, 104)
+gizmo_extents = 19.2
 
-[node name="Red13" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotTwelveRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(232, 104)
+gizmo_extents = 19.2
 
-[node name="Red14" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotThirteenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(360, 104)
-condition = 2
+gizmo_extents = 19.2
 
-[node name="Red15" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotFourteenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(488, 104)
-condition = 1
+gizmo_extents = 19.2
 
-[node name="Red16" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotFifthteenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(616, 104)
-condition = 2
+gizmo_extents = 19.2
 
-[node name="Red17" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotSixteenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(744, 104)
+gizmo_extents = 19.2
 
-[node name="RedTransition" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="FirstTransitionRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(872, 104)
-condition = 3
+gizmo_extents = 19.2
 
-[node name="Red19" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotEighteenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(1000, 104)
+gizmo_extents = 19.2
 
-[node name="Red20" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotNineteenRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(1000, 232)
-condition = 2
+gizmo_extents = 19.2
 
-[node name="Red21" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotTwentyRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(1000, 360)
-condition = 1
+gizmo_extents = 19.2
 
-[node name="Red22" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="SpotTwentyOneRed" type="Marker2D" parent="Positions/Red"]
 position = Vector2(1000, 488)
-condition = 2
+gizmo_extents = 19.2
 
 [node name="Green" type="Node" parent="Positions"]
 
+[node name="StartGreen" type="Marker2D" parent="Positions/Green"]
+position = Vector2(1000, 536)
+gizmo_extents = 19.2
+
 [node name="Orange" type="Node" parent="Positions"]
 
+[node name="StartOrange" type="Marker2D" parent="Positions/Orange"]
+position = Vector2(920, 536)
+gizmo_extents = 19.2
+
 [node name="Blue" type="Node" parent="Positions"]
+
+[node name="StartBlue" type="Marker2D" parent="Positions/Blue"]
+position = Vector2(920, 616)
+gizmo_extents = 19.2
 
 [node name="Dice" parent="." instance=ExtResource("9_0n31q")]
 position = Vector2(440, 384)
