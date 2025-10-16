@@ -8,4 +8,3 @@ func animate_steps(step : int, board_one_spaces : int, game_space : Array[Spot])
 		var tw := create_tween()
 		tw.tween_property(player_red, "position", game_space[Globals.red_position].position, 0.15)
 		await get_tree().create_timer(.5).timeout
-	
