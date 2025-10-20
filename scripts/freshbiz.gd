@@ -13,6 +13,10 @@ extends Node2D
 @onready var dice: Node2D = $Dice
 @onready var roll_button: TextureButton = $RollButton
 @onready var turn_label: Label = $TurnLabel
+@onready var red_money: Label = $Score/RedMoney
+@onready var blue_money: Label = $Score/BlueMoney
+@onready var green_money: Label = $Score/GreenMoney
+@onready var orange_money: Label = $Score/OrangeMoney
 
 var rng := RandomNumberGenerator.new()
 var board_one_size : int
@@ -63,10 +67,46 @@ func _on_roll_button_pressed() -> void:
 	roll_button.disabled = false 
 
 func _penalty_spot() -> void:
-	print(":(")
+	print(":( You lost:(")
+	var temp_int : int
+	if current_player() == player_red:
+		temp_int = int(red_money.text)
+		temp_int -= 10
+		red_money.text = str(temp_int)
+	elif current_player() == player_blue:
+		temp_int = int(blue_money.text)
+		temp_int -= 10
+		blue_money.text = str(temp_int)
+	elif current_player() == player_green:
+		temp_int = int(green_money.text)
+		temp_int -= 10
+		green_money.text = str(temp_int)
+	else:
+		temp_int = int(orange_money.text)
+		temp_int -= 10
+		orange_money.text = str(temp_int)
 
 func _bonus_spot() -> void:
-	print(":)")
+	print(":) you won :)")
+	var temp_int : int
+	if current_player() == player_red:
+		temp_int = int(red_money.text)
+		temp_int += 20
+		red_money.text = str(temp_int)
+	elif current_player() == player_blue:
+		temp_int = int(blue_money.text)
+		temp_int += 20
+		blue_money.text = str(temp_int)
+	elif current_player() == player_green:
+		temp_int = int(green_money.text)
+		temp_int += 20
+		green_money.text = str(temp_int)
+	else:
+		temp_int = int(orange_money.text)
+		temp_int += 20
+		orange_money.text = str(temp_int)
 
 func _transition_spot() -> void:
-	print(":^)")
+	print(":^) bye bye")
+	current_player().hide()
+	Globals.skip_turn[Globals.current_turn] = true

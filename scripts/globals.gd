@@ -1,14 +1,15 @@
 extends Node
 
-var red_position    : int = 0
-var green_position  : int = 0
+var red_position : int = 0
+var green_position : int = 0
 var orange_position : int = 0
-var blue_position   : int = 0
+var blue_position : int = 0
 
 var game_space_red : Array[Spot]
 var game_space_blue : Array[Spot]
 var game_space_orange : Array[Spot] 
 var game_space_green : Array[Spot]
+var skip_turn : Array[bool] = [false, false, false, false]
 
 enum PLAYER {player_red, player_green, player_orange, player_blue}
 var turn_order : Array[PLAYER] = [PLAYER.player_red, PLAYER.player_green, PLAYER.player_orange, PLAYER.player_blue]
@@ -22,7 +23,16 @@ var player_position : Array[POSITION] = [POSITION.red_position, POSITION.green_p
 var current_turn : int = 0
 
 func next_turn() -> void:
-	current_turn = wrapi(current_turn + 1, 0, 4)
+	var start := current_turn
+	while true:
+		current_turn = wrapi(current_turn + 1, 0, 4)
+		if not skip_turn[current_turn]:
+			#skip_turn[current_turn] = false 
+			break
+		if current_turn == start:
+			push_warning("All players flagged to skip – breaking")
+			break
+
 
 func current_player_position() -> int:
 	match player_location[current_turn]:
