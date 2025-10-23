@@ -59,14 +59,8 @@ script = ExtResource("1_cu52o")
 [node name="BoardLayer" type="TileMapLayer" parent="."]
 position = Vector2(-16, -16)
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAACAAIABQAAAAAAAAAGAAIABQAAAAAAAAAKAAIAAgAAAAAAADAOAAIAAAAAAAAAADASAAIAAgAAAAAAADAWAAIABQAAAAAAAAAaAAIABAAAAAAAAAAeAAIABQAAAAAAAAAeAAYAAgAAAAAAAGAeAAoAAAAAAAAAAGAeAA4AAgAAAAAAAGAeABIABQAAAAAAAAAaABIABQAAAAAAAAAWABIAAAAAAAAAAAASABIABQAAAAAAAAAOABIAAgAAAAAAAAAKABIABQAAAAAAAAAGABIAAAAAAAAAAAACABIABQAAAAAAAAACAA4AAgAAAAAAAFACAAoAAAAAAAAAAFACAAYABQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAIABQAAAAAAAAAGAAIABQAAAAAAAAAKAAIAAgAAAAAAADAOAAIAAAAAAAAAADASAAIAAgAAAAAAADAWAAIABQAAAAAAAAAaAAIABAAAAAAAAAAeAAIABQAAAAAAAAAeAAYAAgAAAAAAAGAeAAoAAAAAAAAAAGAeAA4AAgAAAAAAAGAeABIABQAAAAAAAAAaABIABQAAAAAAAAAWABIAAAAAAAAAAAASABIABQAAAAAAAAAOABIAAgAAAAAAAAAKABIABQAAAAAAAAAGABIAAAAAAAAAAAACABIABQAAAAAAAAACAA4AAgAAAAAAAFACAAoAAAAAAAAAAFACAAYABQAAAAAAAAACAP7/BQAAAAAAAAACAPr/AAAAAAAAAFACAPb/AgAAAAAAAFACAPL/BAAAAAAAAGACAO7/BQAAAAAAAAAGAO7/BQAAAAAAAAAKAO7/AAAAAAAAADAOAO7/BQAAAAAAAAASAO7/AAAAAAAAADAWAO7/BQAAAAAAAAAaAO7/AgAAAAAAADAeAO7/BQAAAAAAAAAeAPL/BQAAAAAAAAAeAPb/AgAAAAAAAGAeAPr/BQAAAAAAAAAeAP7/BQAAAAAAAAAaAP7/BQAAAAAAAAAWAP7/AAAAAAAAAAASAP7/BQAAAAAAAAAOAP7/AgAAAAAAAAAKAP7/AAAAAAAAAAAGAP7/BQAAAAAAAAA=")
 tile_set = SubResource("TileSet_rjqkl")
-
-[node name="RollButton" type="TextureButton" parent="."]
-offset_left = 416.0
-offset_top = 360.0
-offset_right = 464.0
-offset_bottom = 408.0
 
 [node name="Players" type="Node" parent="."]
 
@@ -92,344 +86,645 @@ script = ExtResource("9_1e7li")
 
 [node name="Positions" type="Node" parent="."]
 
-[node name="Red" type="Node" parent="Positions"]
+[node name="BoardOne" type="Node" parent="Positions"]
 
-[node name="StartRed" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red" type="Node" parent="Positions/BoardOne"]
+
+[node name="StartRed" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 616)
 condition = 1
 
-[node name="Red2" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red2" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(872, 616)
 
-[node name="Red3" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red3" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(744, 616)
 condition = 2
 
-[node name="Red4" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red4" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(616, 616)
 
-[node name="Red5" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red5" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(488, 616)
 condition = 3
 
-[node name="Red6" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red6" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(360, 616)
 
-[node name="Red7" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red7" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(232, 616)
 condition = 2
 
-[node name="Red8" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red8" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 616)
 
-[node name="Red9" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red9" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 488)
 condition = 3
 
-[node name="Red10" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red10" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 360)
 condition = 2
 
-[node name="Red11" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red11" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 232)
 
-[node name="Red12" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red12" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 104)
 
-[node name="Red13" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red13" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(232, 104)
 
-[node name="Red14" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red14" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(360, 104)
 condition = 3
 
-[node name="Red15" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red15" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(488, 104)
 condition = 2
 
-[node name="Red16" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red16" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(616, 104)
 condition = 3
 
-[node name="Red17" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red17" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(744, 104)
 
-[node name="RedTransition" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="RedTransition" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(872, 104)
 condition = 4
 
-[node name="Red19" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red19" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 104)
 
-[node name="Red20" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red20" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 232)
 condition = 3
 
-[node name="Red21" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red21" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 360)
 condition = 2
 
-[node name="Red22" parent="Positions/Red" instance=ExtResource("10_kwjgc")]
+[node name="Red22" parent="Positions/BoardOne/Red" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 488)
 condition = 3
 
-[node name="Blue" type="Node" parent="Positions"]
+[node name="Blue" type="Node" parent="Positions/BoardOne"]
 
-[node name="StartBlue" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="StartBlue" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 544)
 condition = 1
 
-[node name="Blue2" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue2" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(872, 543)
 
-[node name="Blue3" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue3" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(744, 544)
 condition = 2
 
-[node name="Blue4" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue4" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(616, 544)
 
-[node name="Blue5" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue5" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(488, 544)
 condition = 3
 
-[node name="Blue6" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue6" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(360, 544)
 
-[node name="Blue7" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue7" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(232, 544)
 condition = 2
 
-[node name="Blue8" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue8" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 544)
 
-[node name="Blue9" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue9" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 416)
 condition = 3
 
-[node name="Blue10" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue10" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 288)
 condition = 2
 
-[node name="Blue11" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue11" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 160)
 
-[node name="Blue12" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue12" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(104, 32)
 
-[node name="Blue13" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue13" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(232, 32)
 
-[node name="Blue14" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue14" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(360, 32)
 condition = 3
 
-[node name="Blue15" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue15" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(488, 32)
 condition = 2
 
-[node name="Blue16" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue16" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(616, 32)
 condition = 3
 
-[node name="Blue17" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue17" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(744, 32)
 
-[node name="BlueTransition" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="BlueTransition" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(872, 32)
 condition = 4
 
-[node name="Blue19" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue19" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 32)
 
-[node name="Blue20" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue20" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 160)
 condition = 3
 
-[node name="Blue21" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue21" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 288)
 condition = 2
 
-[node name="Blue22" parent="Positions/Blue" instance=ExtResource("10_kwjgc")]
+[node name="Blue22" parent="Positions/BoardOne/Blue" instance=ExtResource("10_kwjgc")]
 position = Vector2(1000, 415)
 condition = 3
 
-[node name="Orange" type="Node" parent="Positions"]
+[node name="Orange" type="Node" parent="Positions/BoardOne"]
 
-[node name="StartOrange" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="StartOrange" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 616)
 condition = 1
 
-[node name="Orange2" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange2" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(800, 616)
 
-[node name="Orange3" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange3" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(672, 616)
 condition = 2
 
-[node name="Orange4" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange4" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(544, 616)
 
-[node name="Orange5" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange5" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(416, 616)
 condition = 3
 
-[node name="Orange6" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange6" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(288, 616)
 
-[node name="Orange7" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange7" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(160, 616)
 condition = 2
 
-[node name="Orange8" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange8" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 616)
 
-[node name="Orange9" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange9" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 488)
 condition = 3
 
-[node name="Orange10" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange10" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 360)
 condition = 2
 
-[node name="Orange11" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange11" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 232)
 
-[node name="Orange12" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange12" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 104)
 
-[node name="Orange13" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange13" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(160, 104)
 
-[node name="Orange14" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange14" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(288, 104)
 condition = 3
 
-[node name="Orange15" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange15" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(416, 104)
 condition = 2
 
-[node name="Orange16" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange16" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(544, 104)
 condition = 3
 
-[node name="Orange17" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange17" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(672, 104)
 
-[node name="OrangeTransition" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="OrangeTransition" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(800, 104)
 condition = 4
 
-[node name="Orange19" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange19" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 104)
 
-[node name="Orange20" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange20" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 232)
 condition = 3
 
-[node name="Orange21" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange21" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 360)
 condition = 2
 
-[node name="Orange22" parent="Positions/Orange" instance=ExtResource("10_kwjgc")]
+[node name="Orange22" parent="Positions/BoardOne/Orange" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 488)
 condition = 3
 
-[node name="Green" type="Node" parent="Positions"]
+[node name="Green" type="Node" parent="Positions/BoardOne"]
 
-[node name="StartGreen" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="StartGreen" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 544)
 condition = 1
 
-[node name="Green2" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green2" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(800, 544)
 
-[node name="Green3" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green3" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(672, 544)
 condition = 2
 
-[node name="Green4" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green4" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(544, 544)
 
-[node name="Green5" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green5" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(416, 544)
 condition = 3
 
-[node name="Green6" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green6" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(288, 544)
 
-[node name="Green7" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green7" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(160, 544)
 condition = 2
 
-[node name="Green8" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green8" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 544)
 
-[node name="Green9" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green9" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 416)
 condition = 3
 
-[node name="Green10" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green10" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 288)
 condition = 2
 
-[node name="Green11" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green11" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 160)
 
-[node name="Green12" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green12" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(32, 32)
 
-[node name="Green13" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green13" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(160, 32)
 
-[node name="Green14" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green14" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(288, 32)
 condition = 3
 
-[node name="Green15" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green15" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(416, 32)
 condition = 2
 
-[node name="Green16" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green16" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(544, 32)
 condition = 3
 
-[node name="Green17" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green17" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(672, 32)
 
-[node name="GreenTransition" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="GreenTransition" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(800, 32)
 condition = 4
 
-[node name="Green19" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green19" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 32)
 
-[node name="Green20" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green20" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 160)
 condition = 3
 
-[node name="Green21" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green21" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 288)
 condition = 2
 
-[node name="Green22" parent="Positions/Green" instance=ExtResource("10_kwjgc")]
+[node name="Green22" parent="Positions/BoardOne/Green" instance=ExtResource("10_kwjgc")]
 position = Vector2(928, 416)
 condition = 3
 
-[node name="Dice" parent="." instance=ExtResource("9_0n31q")]
-position = Vector2(440, 384)
-scale = Vector2(3, 3)
+[node name="BoardTwo" type="Node" parent="Positions"]
 
-[node name="TurnLabel" type="Label" parent="."]
-offset_left = 416.0
-offset_top = 424.0
-offset_right = 456.0
-offset_bottom = 447.0
+[node name="Red" type="Node" parent="Positions/BoardTwo"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 2
-visible = false
-position = Vector2(521, 319)
+[node name="Red2" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(872, -24)
+
+[node name="Red3" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(744, -24)
+condition = 2
+
+[node name="Red4" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(616, -24)
+
+[node name="Red5" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(488, -24)
+condition = 3
+
+[node name="Red6" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(360, -24)
+condition = 2
+
+[node name="Red7" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(232, -24)
+
+[node name="Red8" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(104, -24)
+
+[node name="Red9" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(104, -152)
+condition = 2
+
+[node name="Red10" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(104, -280)
+condition = 3
+
+[node name="RedTransiton" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(104, -408)
+condition = 4
+
+[node name="Red12" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(104, -536)
+
+[node name="Red13" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(232, -536)
+
+[node name="Red14" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(360, -536)
+condition = 2
+
+[node name="Red15" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(488, -536)
+
+[node name="Red16" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(616, -536)
+condition = 2
+
+[node name="Red17" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(744, -536)
+
+[node name="Red18" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(872, -536)
+condition = 3
+
+[node name="Red19" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000, -536)
+
+[node name="Red20" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000, -408)
+
+[node name="Red21" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000, -280)
+condition = 3
+
+[node name="Red22" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000, -152)
+
+[node name="StartRed" parent="Positions/BoardTwo/Red" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000, -24)
+
+[node name="Blue" type="Node" parent="Positions/BoardTwo"]
+
+[node name="Blue2" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(872.2, -96.79999)
+
+[node name="Blue3" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(744.2, -95.79999)
+condition = 2
+
+[node name="Blue4" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(616.2, -95.79999)
+
+[node name="Blue5" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(488.2, -95.79999)
+condition = 3
+
+[node name="Blue6" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(360.2, -95.79999)
+
+[node name="Blue7" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(232.20001, -95.79999)
+
+[node name="Blue8" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(104.2, -95.79999)
+
+[node name="Blue9" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(104.2, -223.79999)
+condition = 2
+
+[node name="Blue10" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(104.2, -351.8)
+condition = 3
+
+[node name="Blue11" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(104.2, -479.8)
+condition = 4
+
+[node name="Blue12" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(104.2, -607.8)
+
+[node name="Blue13" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(232.20001, -607.8)
+
+[node name="Blue14" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(360.2, -607.8)
+condition = 2
+
+[node name="Blue15" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(488.2, -607.8)
+
+[node name="Blue16" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(616.2, -607.8)
+condition = 2
+
+[node name="Blue17" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(744.2, -607.8)
+
+[node name="Blue18" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(872.2, -607.8)
+condition = 3
+
+[node name="Blue19" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000.19995, -607.8)
+
+[node name="Blue20" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000.19995, -479.8)
+
+[node name="Blue21" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000.19995, -351.8)
+condition = 3
+
+[node name="Blue22" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000.19995, -224.79999)
+
+[node name="StartBlue" parent="Positions/BoardTwo/Blue" instance=ExtResource("10_kwjgc")]
+position = Vector2(1000.19995, -95.79999)
+
+[node name="Orange" type="Node" parent="Positions/BoardTwo"]
+
+[node name="Orange2" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(800.2, -23.799988)
+
+[node name="Orange3" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(672.2, -23.799988)
+condition = 2
+
+[node name="Orange4" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(544.2, -23.799988)
+
+[node name="Orange5" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(416.2, -23.799988)
+condition = 3
+
+[node name="Orange6" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(288.2, -23.799988)
+condition = 2
+
+[node name="Orange7" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(160.2, -23.799988)
+
+[node name="Orange8" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -23.799988)
+
+[node name="Orange9" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -151.79999)
+condition = 2
+
+[node name="Orange10" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -279.8)
+condition = 3
+
+[node name="Orange11" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -407.8)
+condition = 4
+
+[node name="Orange12" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -535.8)
+
+[node name="Orange13" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(160.2, -535.8)
+
+[node name="Orange14" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(288.2, -535.8)
+condition = 2
+
+[node name="Orange15" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(416.2, -535.8)
+
+[node name="Orange16" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(544.2, -535.8)
+condition = 2
+
+[node name="Orange17" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(672.2, -535.8)
+
+[node name="OrangeTransition" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(800.2, -535.8)
+condition = 3
+
+[node name="Orange19" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -535.8)
+
+[node name="Orange20" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -407.8)
+
+[node name="Orange21" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -279.8)
+condition = 3
+
+[node name="Orange22" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -151.79999)
+
+[node name="StartOrange" parent="Positions/BoardTwo/Orange" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -23.799988)
+
+[node name="Green" type="Node" parent="Positions/BoardTwo"]
+
+[node name="GreenStart" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(800.2, -95.79999)
+
+[node name="Green3" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(672.2, -95.79999)
+condition = 2
+
+[node name="Green4" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(544.2, -95.79999)
+
+[node name="Green5" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(416.2, -95.79999)
+condition = 3
+
+[node name="Green6" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(288.2, -95.79999)
+condition = 2
+
+[node name="Green7" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(160.2, -95.79999)
+
+[node name="Green8" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -95.79999)
+
+[node name="Green9" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -223.79999)
+condition = 2
+
+[node name="Green10" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -351.8)
+condition = 3
+
+[node name="Green11" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -479.8)
+condition = 4
+
+[node name="Green12" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(32.2, -607.8)
+
+[node name="Green13" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(160.2, -607.8)
+
+[node name="Green14" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(288.2, -607.8)
+condition = 2
+
+[node name="Green15" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(416.2, -607.8)
+
+[node name="Green16" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(544.2, -607.8)
+condition = 2
+
+[node name="Green17" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(672.2, -607.8)
+
+[node name="GreenTransition" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(800.2, -607.8)
+condition = 3
+
+[node name="Green19" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -607.8)
+
+[node name="Green20" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -479.8)
+
+[node name="Green21" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -351.8)
+condition = 3
+
+[node name="Green22" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -223.79999)
+
+[node name="StartGreen" parent="Positions/BoardTwo/Green" instance=ExtResource("10_kwjgc")]
+position = Vector2(928.2, -95.79999)
+condition = 1
 
 [node name="Score" type="Node" parent="."]
 
@@ -473,5 +768,58 @@ text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="RollButton" to="." method="_on_roll_button_pressed"]
-[connection signal="pressed" from="RollButton" to="." method="_on_texture_button_pressed"]
+[node name="Die" type="Node" parent="."]
+
+[node name="Dice" parent="Die" instance=ExtResource("9_0n31q")]
+position = Vector2(440, 384)
+scale = Vector2(3, 3)
+
+[node name="RollButton" type="TextureButton" parent="Die"]
+offset_left = 416.0
+offset_top = 360.0
+offset_right = 464.0
+offset_bottom = 408.0
+
+[node name="TurnLabel" type="Label" parent="Die"]
+offset_left = 416.0
+offset_top = 424.0
+offset_right = 456.0
+offset_bottom = 447.0
+
+[node name="Dice2" parent="Die" instance=ExtResource("9_0n31q")]
+position = Vector2(440, -264)
+scale = Vector2(3, 3)
+
+[node name="RollButton2" type="TextureButton" parent="Die"]
+offset_left = 416.0
+offset_top = -288.0
+offset_right = 464.0
+offset_bottom = -240.0
+
+[node name="TurnLabel2" type="Label" parent="Die"]
+offset_left = 424.0
+offset_top = -232.0
+offset_right = 464.0
+offset_bottom = -209.0
+
+[node name="Cameras" type="Node" parent="."]
+
+[node name="BoardOneCamera" type="Camera2D" parent="Cameras"]
+physics_interpolation_mode = 2
+visible = false
+position = Vector2(520, 321)
+
+[node name="BoardTwoCamera" type="Camera2D" parent="Cameras"]
+physics_interpolation_mode = 2
+visible = false
+position = Vector2(520, -321)
+
+[node name="BoardOneCamera2" type="Camera2D" parent="Cameras"]
+physics_interpolation_mode = 2
+visible = false
+position = Vector2(576, -8)
+zoom = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="Die/RollButton" to="." method="_on_roll_button_pressed"]
+[connection signal="pressed" from="Die/RollButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Die/RollButton2" to="." method="_on_roll_button_2_pressed"]
